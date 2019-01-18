@@ -1,0 +1,94 @@
+<DOCTYPE html>
+<!--
+    Phylopi: Purpose built phylogenetic pipeline for the HIV drug
+    resistance testing facility.
+
+    Copyright (C) 2018 Armand Bester, University of the Free State
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+	<head>
+		<style>
+		body {
+			background-color: #E8E8E8 ;
+		}		
+		h2 {
+			color: black;
+			text-align: center;
+		}		
+		p {
+			font-family: "Arial";
+			font-size: 20px;
+		}
+		</style>
+		<meta charset="utf-8"/>
+		<title>Phylogenetic analysis</title>		
+		<h2>Phylogenetic analysis</h2>		
+		<h3>Input</h3>
+		
+	</head>
+	<body>
+		<form enctype="multipart/form-data" 
+                     action="cgi-bin/phylophile/input.py" method="post">
+
+			<p>Fasta File: <input type="file" name="filename" required="required"/></p>
+			
+			<p><input type="submit" value="Upload" id="Upload" /></p>
+			<p>Number of most similar blast result to include: 
+			<p>
+			<input type="radio" name="hits" value="1"> 1
+			<input type="radio" name="hits" value="2"> 2
+			<input type="radio" name="hits" value="3"> 3
+			<input type="radio" name="hits" value="4"> 4
+			<input type="radio" name="hits" value="5" checked> 5
+			<input type="radio" name="hits" value="6"> 6
+			<p>
+			---------------------------------------------------------------------------------------------
+		</form>
+	</body>
+	
+	<body>		
+		<form>
+		<input type=button onClick="parent.location='search.html'" value='Search Previous'>
+		<p>
+		<input type=button onClick="parent.location='find_samples.html'" value='Find samples'>
+		<p>
+		---------------------------------------------------------------------------------------------
+		<p>
+		<input type=button onClick="parent.location='blast_db.html'" value='BLASTdb conf'>
+		<i>Remeber to create an initial blastn database</i>
+		</form>
+		
+		<p>
+		---------------------------------------------------------------------------------------------
+		<p>
+		
+		<input type=button onClick="parent.location='sanity.html'" value='Sanity'>
+		<i>A crude check using blastn</i>
+		</form>
+		<p>
+		<p>
+		<i>
+	NOTE:  PhyloPi has been tested only on the pol region of the HIV genome. <br>
+               Typical genotyping targets for clinical purposes include the protease,<br>
+	       reverse transcriptase and integrase regions of the genome, either as <br>
+	       separate or continuous sequences.  Phylogenetics can only be conducted <br>
+	       on areas which overlap.  For example, if your facility uses separate <br> 
+	       assays to genotype the PR_RT area and the INT area you will need to submit<br>
+	       these sequences as separate analyses. 
+		</i>
+
+	</body>
+</html>

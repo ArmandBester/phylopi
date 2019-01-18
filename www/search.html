@@ -1,0 +1,62 @@
+<DOCTYPE html>
+<!--
+    Phylopi: Purpose built phylogenetic pipeline for the HIV drug
+    resistance testing facility.
+
+    Copyright (C) 2018 Armand Bester, University of the Free State
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+	<head>
+		<style>
+		body {
+			background-color: #E8E8E8 ;
+		}		
+		h2 {
+			color: black;
+			text-align: center;
+		}		
+		p {
+			font-family: "Arial";
+			font-size: 20px;
+		}
+		</style>
+		<meta charset="utf-8"/>
+		<title>Search previous</title>
+		<h2>Search previous results</h2>		
+	</head>
+	
+	<body>
+		<form enctype="multipart/form-data" 
+                     action="cgi-bin/phylophile/search.py" method="post">
+		
+		<b>Name &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Primary sample &nbsp; Secondary sample</b>
+		<p>
+		<input type="text" name="Name">
+		<input type="text" name="PriSample">
+		<input type="text" name="SecSample">
+		<p>*If all fields are left empty, all previous reluts will be retrieved</p>
+		<p>
+		<input type="submit" value="Search"/>        
+		</form>
+		<form>
+		<input type=button onClick="parent.location='index.html'" value='Return to input'>
+		</form>
+	</body>
+</html>
+	
+
+	
+

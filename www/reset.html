@@ -1,0 +1,54 @@
+<DOCTYPE html>
+<!--
+    Phylopi: Purpose built phylogenetic pipeline for the HIV drug
+    resistance testing facility.
+
+    Copyright (C) 2018 Armand Bester, University of the Free State
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+	<head>
+		<style>
+		body {
+			background-color: #E8E8E8 ;
+		}		
+		h2 {
+			color: black;
+			text-align: center;
+		}		
+		p {
+			font-family: "Arial";
+			font-size: 20px;
+		}
+		</style>
+		<meta charset="utf-8"/>
+		<title>RESET</title>		
+		<h2>Reset your server and clear all data</h2>
+	</head>
+		
+		<p>Clicking on the reset button will reset all your data:</p>
+		<p>1. Your blast database, you will need to configure it again</p>
+		<p>2. All previous analysis</p>
+		
+		
+		
+
+		<form enctype="multipart/form-data" 
+                     action="cgi-bin/phylophile/reset.py" method="post">
+		<p><input type="submit" value="Reset" /></p>
+
+
+	</body>
+</html>

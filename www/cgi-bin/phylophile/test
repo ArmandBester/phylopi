@@ -1,0 +1,1 @@
+./blastn -query input/replicate_3_repeat_22.02.2018_Iqra.fas -db sanity/sanity -evalue 0.1 -outfmt 10 -out q_mapping.csv -num_threads 4
