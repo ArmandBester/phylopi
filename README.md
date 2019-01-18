@@ -5,9 +5,9 @@ PhyloPi is an automated phylogenetics pipeline designed for the drug resistance 
 Our manuscript is available at https://www.biorxiv.org/content/early/2018/07/13/367946
 
                    
-##Installation instructions
+## Installation instructions
 
-###On a Raspberry Pi 3
+### On a Raspberry Pi 3
 
 The image for PhyloPi can be downloaded from 
 
@@ -55,7 +55,7 @@ etcher: https://etcher.io/ A multiplatform aplication to flash the PhyloPi image
 
 Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
-###Installing on another platform
+### Installing on another platform
 
 If you want to install our pipeline on another platform, let say a virtual machine which you can run on your Windows PC or Mac, please contact us for an image.
 
