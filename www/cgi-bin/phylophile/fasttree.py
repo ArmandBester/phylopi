@@ -89,7 +89,7 @@ def fasttree():
     project_name = log_dict["project_name"]
     gblocks_cleaned_file_path = str(log_dict["mafft_aln"]).replace(".aln","") + "_trimal.cleaned.aln"
     #fasttree tree
-    FastTree_cmd = "./FastTreeMP -nt -spr 4 -mlacc 2 -slownni -gtr -gtrrates 1.000000 5.508291 1.000000 1.000000 5.508291 1.000000 -gtrfreq 0.25 0.25 0.25 0.25" + gblocks_cleaned_file_path + " > "  + result_dir + project_name +  "_fastTree_tree.txt"
+    FastTree_cmd = "./FastTreeMP -nt -spr 4 -mlacc 2 -slownni -gtr -gtrrates 1.000000 5.508291 1.000000 1.000000 5.508291 1.000000 -gtrfreq 0.25 0.25 0.25 0.25 " + gblocks_cleaned_file_path + " > "  + result_dir + project_name +  "_fastTree_tree.txt"
     os.popen(FastTree_cmd)
         
 
