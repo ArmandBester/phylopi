@@ -63,10 +63,10 @@ Alternatively, you can roll your own.  The source code is available at
 
 https://github.com/ArmandBester/phylopi
 
-Be sure to have binaries compile for your architecture, the ones from github is for ARM. 
+Be sure to have binaries compiled for your architecture, the ones from github is for ARM. 
 
 
-If you need any help, have any suggestions or would like to contribute, contact us on:
+If you need any help, have any suggestions or would like to contribute, contact us at:
 
 besterpa@ufs.ac.za
 or
