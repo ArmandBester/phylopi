@@ -1,0 +1,53 @@
+---
+title: "Benchmarking makeblastdb"
+author: "Armand"
+date: "22 January 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Benchmark time analysis for makeblastdb
+
+The python script included in this repo was used to sample pseudo random sequences from the Los Alamos sequences as described in our paper, Table 2.
+<p>
+The code below plots the results and fits a linear model where the number of sequences is the independent variable and the time it takes is the dependent variable.
+<p>
+```{r}
+library(ggplot2)
+
+
+#system("scp pi@196.254.115.64:/home/pi/blastDataBaseTiming/makeBlastTimes.txt .")
+
+
+timeFile <- read.csv("makeBlastTimes.txt", header = F)
+
+colnames(timeFile) <- c("n", "s")
+
+
+lin <- lm(s ~ n, data = timeFile)
+
+summary(lin)
+
+p <- ggplot(timeFile, aes(x = n, y = s))+
+  geom_point(size = 0.5)+
+  geom_smooth(method = 'lm', color = "black", linetype = "dashed")+
+  theme_bw()+
+  xlab("Number of sequences")+
+  ylab("Time (s)")
+p
+
+ggsave(filename = "makeblastdb.tiff", plot = p, dpi = 300)
+```
+
+<p>
+From the linear model summary shown above, we can see that it takes approximately 0.0009 seconds for every sequence.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
