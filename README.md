@@ -2,7 +2,7 @@
 
 PhyloPi is an automated phylogenetics pipeline designed for the drug resistance testing facility.  It uses BLAST to update a rolling database with each submission as well as retrieving most similar sequences to include in the analysis.
 
-Our manuscript is available at https://www.biorxiv.org/content/early/2018/07/13/367946
+Our manuscript is available at https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213241
 
                    
 ## Installation instructions
